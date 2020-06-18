@@ -1,0 +1,46 @@
+<script type="text/javascript" defer="defer">
+	// 设置公告
+
+	// 设置博客信息
+	var myprofile = [{
+		blogName: "chang",
+		// favioc
+		blogAvatar: "",
+		blogSign: "Stay hungry,Stay foolish.",
+		blogFollow: "follow('30807ee3-3273-4cff-72df-08d619358b99')",
+		QQ: "1584541746",
+		Github: "https://github.com/changorz",
+		WeChat: ""
+	}];
+
+
+	// 设置导航栏扩展
+
+	var mynav = [{
+		id: "blog_nav_cnblogs",
+		url: "https://home.cnblogs.com",
+		title: "园子"
+	},
+	{
+		id: "blog_nav_theme",
+		url: "javascript:changeTheme()",
+		title: "模式切换"
+	}
+	];
+	$(document).ready(function () {
+
+		// loadNewsinfo(news); //公告
+		setFavio(myprofile); // 网页tab图像
+		loadThemeColor(); //导入主题颜色
+		extendNav(mynav); // 导航栏扩展
+		// loadBanner(mybanner); //首页轮播
+		setPostSideBar(); //侧边栏目录
+		blankTarget(); //文章链接新窗口打开
+		copyCode(); //代码块复制
+		tableScorll(); //表格滚动
+		ninghtTip(); //夜间模式提醒
+		myscroll();
+		Notiflix.Notify.Init();
+		mymd();
+	});
+</script>
