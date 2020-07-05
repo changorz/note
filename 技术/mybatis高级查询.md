@@ -12,6 +12,16 @@
 
 ![image-20200214164109135](https://ae01.alicdn.com/kf/H8fda937c5eff402fb684533964f90584D.png)
 
+```
+property="list"              名称
+javaType="list"              
+ofType="performance"         泛型类型
+select="findPerformanceListByXh"     
+column="xh"    
+```
+
+
+
 ![image-20200214163711773](https://ae01.alicdn.com/kf/Hb6f0b3e34b1040c78066d5c372f3a135d.png)
 
 
