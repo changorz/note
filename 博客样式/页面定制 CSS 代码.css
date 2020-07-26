@@ -1933,10 +1933,11 @@ filter:brightness(var(--ImgBright));
 		border: none;
 		color: var(--TextColor2);
 		margin: 20px 0;
-		padding: 0 0 0 10px;
+		padding: 2px 0 2px 10px;
 		min-height: 20px;
 		background: 0 0;
 		border-left: 4px solid var(--TextColor2);
+		background-color: #ff006c;
 		/*#dfe2e5*/
 	}
 
