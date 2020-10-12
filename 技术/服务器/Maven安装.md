@@ -65,7 +65,13 @@ vim  settings.xml
 
 ```
 
-**参考博客：https://www.cnblogs.com/dszazhy/p/11528276.html**
+> 修改本地仓库权限
+
+```bash
+chown -R jenkins:jenkins maven-bdck
+```
+
+参考博客：https://www.cnblogs.com/dszazhy/p/11528276.html**
 
 
 
