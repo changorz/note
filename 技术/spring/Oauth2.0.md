@@ -73,3 +73,16 @@ CREATE TABLE ClientDetails (
 ```
 
 参考文档：https://blog.csdn.net/u014427391/article/details/106757121
+
+
+
+
+
+##  接口
+
+```java
+POST /oauth/authorize  授权码模式认证授权接口
+GET/POST /oauth/token  获取 token 的接口
+POST  /oauth/check_token  检查 token 合法性接口
+```
+
