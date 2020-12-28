@@ -1,4 +1,4 @@
-package chang;
+package chang.autocode;
 
 
 import com.baomidou.mybatisplus.annotation.DbType;
@@ -23,7 +23,7 @@ public class MyCodeGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         // 项目名称
-        String objName = "demo";
+        String objName = "jw-book-ms";
         // 项目的目录
         String projectPath = System.getProperty("user.dir") + "/" + objName;
         gc.setOutputDir(projectPath + "/src/main/java/");
@@ -41,7 +41,7 @@ public class MyCodeGenerator {
 
         // 设置数据源
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/syxy?useSSL=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://localhost:3306/bs?useSSL=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");
@@ -51,7 +51,8 @@ public class MyCodeGenerator {
         // 包的配置
         PackageConfig pc = new PackageConfig();
         // pc.setModuleName("mybatis_plus");
-        pc.setParent("chang");
+        //  pc.setParent("chang");
+        pc.setParent("com.swxy.jwbookms");
         pc.setEntity("pojo");
         pc.setMapper("mapper");
         pc.setService("service");
@@ -61,7 +62,14 @@ public class MyCodeGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 要映射的表明
-        strategy.setInclude("user","role","authority");
+        strategy.setInclude(
+                "book_store",
+                "publishing_house",
+                "curriculum_plan",
+                "student_info",
+                "book_total",
+                "unbook"
+        );
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
@@ -99,6 +107,26 @@ public class MyCodeGenerator {
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-engine-core</artifactId>
 			<version>2.2</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+
+
+				<!--swagger2-->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 
 
